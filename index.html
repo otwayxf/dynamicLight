@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>DynamicLight</title>
+	</head>
+	<style>
+		.light-strip {
+			width: 500px;
+			height:500px;
+			border: 1px solid #efefef;
+			background-image: url('Frame 29@3x.png');
+			/* background-color: #fff; */
+			float: right;
+			background-size: 100% 100%;
+		}
+		.light-strip-top {
+			margin-top: 50%;
+			width: 49%;
+			height: 4px;
+			background: red;
+			transform-origin: center right;
+			/* transform: rotate 5s ; */
+			rotate: -50deg;
+			transition: all 2s ease-in-out;
+		}
+		
+	</style>
+	<body onload="load()">
+		<div class="light-strip">
+			<div class="light-strip-top">
+				
+			</div>
+		</div>
+
+	</body>
+	<script>
+		function load() {
+			setTimeout(() => {
+				document.querySelectorAll('.light-strip-top')[0].setAttribute('style', "rotate: 90deg")
+			}, 1000)
+		}
+	</script>
+</html>
